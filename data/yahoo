@@ -1,0 +1,21 @@
+http://table.finance.yahoo.com/table.csv?s=0700.hk
+
+Date Open High Low Close Volume Adj Close
+分别是：日期、开盘价、最高价、最低价、收盘价、收盘价、成交量、复权收盘价 
+ 
+
+【例子】 取 2012年1月1日 至 2012年4月19日的数据
+http://table.finance.yahoo.com/table.csv?a=0&b=1&c=2012&d=3&e=19&f=2012&s=600000.ss
+private string CreatUrl(string _Symbol)
+{
+DateTime dt = DateTime.Today.AddYears(-1);
+dt.AddDays(-10);
+int a = dt.Month -1 ;
+int b = dt.Day;
+int c = dt.Year;
+int d = DateTime.Today.Month -1 ;
+int e = DateTime.Today.Day;
+int f = DateTime.Today.Year;
+return @"http://table.finance.yahoo.com/table.csv?a=" + a + @"&b=" + b + @"&c=" + c + @"&d=" + d + @"&e=" + e + @"&f=" + f + @"&s=" + _Symbol + @"&y=0&g=d&ignore=.csv";
+
+}
