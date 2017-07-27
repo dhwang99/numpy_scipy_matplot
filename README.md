@@ -9,7 +9,7 @@
 >    [numpy](numpy)
 
 
-#### 2. numpy入门 
+#### 2. scipy入门 
 >   scipy示例。放了几个小的例子。在numpy的char09,char10里也有一些
 
 >    [scipy](scipy_intro)
